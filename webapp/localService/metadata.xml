@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="4.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema Namespace="NerdMeetup.Models"
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+            <EntityType Name="TechnicalObject">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.Int32" Nullable="false" sap:label="Id"/>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" sap:label="Technical Object"/>
+                <Property Name="NoOfOrders" Type="Edm.Int32" Nullable="false" sap:label="Number Of Orders"/>
+                <Property Name="Description" Type="Edm.String" Nullable="true" sap:label="Description"/>
+                <Property Name="Level" Type="Edm.String" Nullable="false" sap:label="Level"/>
+            </EntityType>
+            <EntityType Name="Order">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:label="Id"/>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" sap:label="Order"/>
+                <Property Name="NoOfOperation" Type="Edm.String" Nullable="false" sap:label="Number Of Operations"/>
+                <Property Name="WorkPackage" Type="Edm.String" Nullable="false" sap:label="WorkPackage"/>
+            </EntityType>
+            <EntityType Name="Operation">
+                <Key>
+                    <PropertyRef Name="ID" />
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" sap:label="Id"/>
+                <Property Name="ObjectID" Type="Edm.String" Nullable="false" sap:label="Operation"/>
+                 <Property Name="OrderId" Type="Edm.String" Nullable="false" sap:label="Order"/>
+                 <Property Name="WorkCenter" Type="Edm.String" Nullable="false" sap:label="Work Center"/>
+                <Property Name="Description" Type="Edm.String" Nullable="true" sap:label="Description"/>
+                <Property Name="WorkPackage" Type="Edm.String" Nullable="true" sap:label="WorkPackage"/>
+            </EntityType>
+           
+            <EntityContainer Name="NerdMeetups" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="TechnicalObjects" EntityType="NerdMeetup.Models.TechnicalObject" />
+                <EntitySet Name="Orders" EntityType="NerdMeetup.Models.Order" />
+                 <EntitySet Name="Operations" EntityType="NerdMeetup.Models.Operation" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

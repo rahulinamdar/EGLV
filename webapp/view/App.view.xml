@@ -1,0 +1,17 @@
+<mvc:View controllerName="com.demo.prototype.controller.App"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <App id="idaApp">
+    <Page id="id1Page"
+        title="EGLV"
+    >
+    <headerContent>
+			<Button icon="sap-icon://action" text="Technical Object View" tooltip="Share" press="onPress"/>
+		</headerContent>
+        <content>
+            <NavContainer id="idNavContainer" class="panelPage"/>
+        </content>
+        
+    </Page>
+    </App>
+</mvc:View>

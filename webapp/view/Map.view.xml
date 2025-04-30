@@ -1,0 +1,6 @@
+<mvc:View
+	height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+	<MessagePage id="idMessagePage" showHeader="false" icon="sap-icon://map"  text="SAP GIS Map" description="SAP GIS Map"/>
+</mvc:View>

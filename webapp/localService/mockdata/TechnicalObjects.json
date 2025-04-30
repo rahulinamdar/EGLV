@@ -1,0 +1,38 @@
+[
+    {
+        "ID":1,
+        "ObjectID":"103007",
+        "NoOfOrders":242,
+        "Description":"KLA BOT-Bottrop",
+        "Level":"1"
+    },
+    {
+        "ID":2,
+        "ObjectID":"103007-B",
+        "NoOfOrders":53,
+        "Description":"Biologischer Teil der Klaranlage",
+        "Level":"2"
+    },
+
+   {
+        "ID":3,
+        "ObjectID":"103007-E",
+        "NoOfOrders":7,
+        "Description":"Elektrotechnische Einrichtungen",
+        "Level":"2"
+    },
+   {
+        "ID":4,
+        "ObjectID":"103007-EC",
+        "NoOfOrders":3,
+        "Description":"Niederspannungsschaltanlage",
+        "Level":"3"
+    },
+   {
+        "ID":5,
+        "ObjectID":"103007-EH",
+        "NoOfOrders":1,
+        "Description":"Einrichtag",
+        "Level":"3"
+    }
+]
